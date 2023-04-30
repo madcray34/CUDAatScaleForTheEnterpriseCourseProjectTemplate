@@ -9,15 +9,29 @@ NPP Library
 
 ## Project Description
 
-This NPP CUDA Sample uses the NPP Canny edge detector to detect edges in gray scale images. 
+This NPP CUDA Sample uses the NPP Canny edge detector to detect edges in gray scale images.
+ 
 By default, the input image is located in the "./data" directory, but you can specify a different path using the "-input" argument. 
 Similarly, the output image is saved in the "./data" directory by default, but you can choose a different location using the "-output" argument. 
 You can also adjust the low and high thresholds for the Canny edge detector using the "-ls" argument; 
 the default values are 72 and 256, respectively.
+
 The software supports gray scale images in any format that can be read by FREE_IMAGE_FORMAT, 
 and it automatically saves output images in the same format as the input image.
+
 The input image format I used was a *.tiff
+
 If desired, you can take two additional steps to improve the performance of the software. 
+
+First, you can add a Gaussian blur filter to the input image to reduce noise before applying the Canny edge detector. 
+Second, you can modify the imageIO.h file to load color images creating a new overloaded function npp::loadImage(path, npp::ImageCPU_8u_C3) or by template means.
+
+Most of the result images suffer from noise, which confounds edge detection. 
+However image "5.1.11" features minimal salt-and-pepper noise and well-defined border contours, enabling it to achieve superior edge detection performance.
+
+To further improve the edge detector, we can develop interfaces that allow users to adjust the Canny edge detector's low and high thresholds parameters, as well as the gradient filter. 
+This would enable users to fine-tune the detector's performance and achieve better results.
+
 
 ## Code Organization
 
