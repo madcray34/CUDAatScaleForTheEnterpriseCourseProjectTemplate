@@ -9,30 +9,48 @@ NPP Library
 
 ## Project Description
 
-An NPP CUDA Sample that demonstrates the recommended parameters to use with the nppiFilterCannyBorder_8u_C1R Canny Edge Detection image filter function. This function expects a single channel 8-bit grayscale input image. You can generate a grayscale image from a color image by first calling nppiColorToGray() or nppiRGBToGray(). The Canny Edge Detection function combines and improves on the techniques required to produce an edge detection image using multiple steps.
+This NPP CUDA Sample uses the NPP Canny edge detector to detect edges in gray scale images. 
+By default, the input image is located in the "./data" directory, but you can specify a different path using the "-input" argument. 
+Similarly, the output image is saved in the "./data" directory by default, 
+but you can choose a different location using the "-out" argument. 
+You can also adjust the low and high thresholds for the Canny edge detector using the "-ls" argument; 
+the default values are 72 and 256, respectively.
+
+The software supports gray scale images in any format that can be read by FREE_IMAGE_FORMAT, 
+and it automatically saves output images in the same format as the input image.
+
+If desired, you can take two additional steps to improve the performance of the software. 
+First, you can add a Gaussian blur filter to the input image to reduce noise before applying the Canny edge detector. 
+Second, you can modify the imageIO.h file to load color images using npp::loadImage(path, npp::ImageCPU_8u_C3).
+
+Most of the result images suffer from noise, which confounds edge detection. 
+However image "5.1.11" features minimal salt-and-pepper noise and well-defined border contours, enabling it to achieve superior edge detection performance.
+
+To further improve the edge detector, we can develop interfaces that allow users to adjust the Canny edge detector's low and high thresholds, as well as the NORM parameter. 
+This would enable users to fine-tune the detector's performance and achieve better results.
 
 ## Code Organization
 
 ```bin/```
-This folder should hold all binary/executable code that is built automatically or manually. Executable code should have use the .exe extension or programming language-specific extension.
+contains the automatically built executable code, which is saved as a .exe file.
 
 ```data/```
-This folder should hold all example data in any format. If the original data is rather large or can be brought in via scripts, this can be left blank in the respository, so that it doesn't require major downloads when all that is desired is the code/structure.
+contains input and output images used for the project. All images are in gray scale.
 
 ```lib/```
-Any libraries that are not installed via the Operating System-specific package manager should be placed here, so that it is easier for inclusion/linking.
+contains all the libraries used by the project. The Visual Studio 2019 IDE is set up to automatically load the includes and libraries from this folder relative to the .sln folder.
 
 ```src/```
-The source code should be placed here in a hierarchical fashion, as appropriate.
+contains the project's source code, which consists of a single file.
 
 ```README.md```
-This file should hold the description of the project so that anyone cloning or deciding if they want to clone this repository can understand its purpose to help with their decision.
+contains a description of the project.
 
 ```INSTALL```
-This file should hold the human-readable set of instructions for installing the code so that it can be executed. If possible it should be organized around different operating systems, so that it can be done by as many people as possible with different constraints.
+provides a brief description of the requirements for the project.
 
 ```Makefile or CMAkeLists.txt or build.sh```
-There should be some rudimentary scripts for building your project's code in an automatic fashion.
+Tried to use CMake but the result is a little bit messy.
 
 ```run.sh```
-An optional script used to run your executable code, either with or without command-line arguments.
+is a script provided with the project that can be run after cloning the repository to generate all the outputs as loaded in the data folder.
