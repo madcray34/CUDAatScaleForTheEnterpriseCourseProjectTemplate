@@ -1,9 +1,15 @@
-# CUDAatScaleForTheEnterpriseCourseProjectTemplate
-This is a template for the course project for the CUDA at Scale for the Enterprise
+# cannyEdgeDetectorNPP
+Sample: cannyEdgeDetectorNPP
+Minimum spec: SM 3.5
+
+Key concepts:
+Performance Strategies
+Image Processing
+NPP Library
 
 ## Project Description
 
-Beyond just being a template for course members, this project can be used by non-course members as the general structure for CUDA projects.
+An NPP CUDA Sample that demonstrates the recommended parameters to use with the nppiFilterCannyBorder_8u_C1R Canny Edge Detection image filter function. This function expects a single channel 8-bit grayscale input image. You can generate a grayscale image from a color image by first calling nppiColorToGray() or nppiRGBToGray(). The Canny Edge Detection function combines and improves on the techniques required to produce an edge detection image using multiple steps.
 
 ## Code Organization
 

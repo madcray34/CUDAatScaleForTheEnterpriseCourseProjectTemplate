@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{62fb2431-2e3c-46d9-b4f7-cc08f9eaa26c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\FreeImage\include\FreeImage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\Exceptions.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\Image.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImageAllocatorsCPU.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImageAllocatorsNPP.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImageIO.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImagePacked.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImagesCPU.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\ImagesNPP.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\Pixel.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\Signal.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\SignalAllocatorsCPU.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\SignalAllocatorsNPP.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\SignalsCPU.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\SignalsNPP.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\StopWatch.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\StopWatchBase.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\UtilNPP\StopWatchWin.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\UtilNPP\StopWatchBase.inl">
+      <Filter>Include</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\UtilNPP\StopWatchWin.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

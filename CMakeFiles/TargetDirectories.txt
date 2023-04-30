@@ -1,0 +1,2 @@
+C:/Users/itven2563/Documents/-- CUDA course/Coursera/Course 3/Code/CMakeFiles/edit_cache.dir
+C:/Users/itven2563/Documents/-- CUDA course/Coursera/Course 3/Code/CMakeFiles/rebuild_cache.dir
